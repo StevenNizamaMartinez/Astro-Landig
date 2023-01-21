@@ -1,0 +1,21 @@
+---
+import projects from "../../config/projects.json";
+---
+
+<section>
+  <h1 class="text-5xl text-center font-bold">Projects</h1>
+  <div class="grid md:grid-cols-3">
+    {
+      projects.map((project) => (
+        <div class=" my-8 mx-4 rounded-xl bg-teal-900 p-4 grid grid-cols-2">
+          <h2 class="text-center text-xl font-bold mb-4">{project.title}
+            <p class="text-xs font-normal text-left mt-2">{project.description}</p>
+        </h2>
+          
+          <img class="w-20 place-self-center " src="/images/project.svg" alt="">
+        </div>
+      ))
+    }
+
+  </div>
+</section>
